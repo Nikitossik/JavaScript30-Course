@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/background.jpg") no-repeat center center / cover;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.sound-button {
+  cursor: pointer;
+  width: 100px;
+  padding: 20px 0;
+  z-index: 1;
+  margin: 0 8px 8px 8px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  transition: 0.4s;
+}
+
+.sound-button__key {
+  font-size: 2em;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  line-height: 1.2;
+  user-select: none;
+}
+
+.sound-button__sound-name {
+  font-size: 1em;
+  display: block;
+  color: #ffb235;
+  text-align: center;
+  user-select: none;
+}
+
+.sound-button__playing {
+  transform: scale(1.1);
+  border-color: #ffb235;
+}
