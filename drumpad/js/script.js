@@ -12,7 +12,6 @@ soundButtons.forEach(function (button) {
     button.addEventListener('click', function (e) {
         const code = e.target.dataset.key;
         const audio = document.querySelector(`audio[data-key='${code}']`);
-        console.log(code, audio);
         playAudio(audio);
         button.classList.add('sound-button__playing');
     });

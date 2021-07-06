@@ -42,31 +42,33 @@ body {
   padding: 20px 0;
   z-index: 1;
   margin: 0 8px 8px 8px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 3px solid rgba(255, 255, 255, 0.18);
-  transition: 0.4s;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  transition: 0.2s all ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sound-button__key {
   font-size: 2em;
-  display: block;
   text-transform: uppercase;
-  text-align: center;
   color: #fff;
   line-height: 1.2;
   user-select: none;
+  pointer-events: none;
 }
 
 .sound-button__sound-name {
   font-size: 1em;
-  display: block;
   color: #ffb235;
-  text-align: center;
   user-select: none;
+  pointer-events: none;
 }
 
 .sound-button__playing {
